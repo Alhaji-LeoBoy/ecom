@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.2/font/bootstrap-icons.min.css"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Hello React</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="60"
+      height="60"
+      fill="currentColor"
+      class="bi bi-list"
+      viewBox="0 0 16 16"
+      id="menu"
+    >
+      <path
+        fill-rule="evenodd"
+        d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5zm0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5z"
+      />
+    </svg>
+    <div class="navbar-container">
+      <div class="icon">
+        <h1><i class="bi bi-person-wheelchair"></i>LeoBoySite</h1>
+      </div>
+      <div class="cartDiv">
+        <a href="cart.html"><i class="bi bi-bag"></i> Cart</a>
+      </div>
+      <div class="list">
+        <a href="index.html">Home</a>
+        <a href="#" id="myBtn"> Add Item </a>
+        <a href="#">Login</a>
+        <a href="cart.html"
+          ><i class="bi bi-bag"></i> Cart <span class="cart">0</span></a
+        >
+      </div>
+    </div>
+    <div class="quote-container">
+      <div class="quotewrapper">
+        <h1 class="quotetitle">Developer Quotes</h1>
+        <p class="quote">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Dicta
+          adipisci vitae velit voluptates eos praesentium, magni reprehenderit
+          delectus earum quis aliquam tempora, harum corporis et quae molestias
+          maiores officiis. Magni.
+        </p>
+      </div>
+    </div>
+    <div id="root">
+      <div class="buttoncontainer">
+        <label>
+          Sort Items
+          <select id="selectspecial">
+            <option value="sortprice">Higest Price</option>
+            <option value="sortpricelow">Lowest Price</option>
+            <option value="sortAz">Sort A-z</option>
+            <option value="sortZa">Sort Z-a</option>
+          </select></label
+        >
+      </div>
+      <div class="moviecontainer">
+        <!-- <div class="movie">
+          <div class="movie">
+            <h3 class="t">Title: ${data.title}</h3>
+            <p>Autor: ${data.author}</p>
+            <p>No. Of Pages ${data.pages} Pages</p>
+            <p>Genres: ${data.genres}</p>
+            <p>Date Published: ${data.publicationDate}</p>
+          </div>
+        </div> -->
+      </div>
+    </div>
+    <!-- The Modal -->
+    <div id="myModal" class="modal">
+      <!-- Modal content -->
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <div class="formcontainer">
+          <div class="wrapperx">
+            <h3 style="text-align: center; font-size: larger">
+              Add New Food Item
+            </h3>
+
+            <div>
+              <form id="myForm">
+                <label for="image">Image</label>
+                <input type="file" id="myFile" name="filename" /> <br />
+                <label for="name">Food Name</label>
+                <input
+                  type="text"
+                  id="name"
+                  name="name"
+                  placeholder="Enter the Food Name"
+                />
+
+                <label for="Ingridents">Ingridents Used</label>
+                <input
+                  type="text"
+                  id="Ingridents"
+                  name="Ingridents"
+                  placeholder="Ingridents Used"
+                  required
+                />
+
+                <label for="price">Price $</label>
+                <input type="text" id="price" name="price" required />
+
+                <input type="submit" value="Submit" />
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Get the modal
+      var modal = document.getElementById("myModal");
+
+      // Get the button that opens the modal
+      var btn = document.getElementById("myBtn");
+
+      // Get the <span> element that closes the modal
+      var span = document.getElementsByClassName("close")[0];
+
+      // When the user clicks the button, open the modal
+      btn.onclick = function () {
+        modal.style.display = "block";
+      };
+
+      // When the user clicks on <span> (x), close the modal
+      span.onclick = function () {
+        modal.style.display = "none";
+      };
+
+      // When the user clicks anywhere outside of the modal, close it
+      window.onclick = function (event) {
+        if (event.target == modal) {
+          modal.style.display = "none";
+        }
+      };
+    </script>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

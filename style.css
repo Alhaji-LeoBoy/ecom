@@ -1,0 +1,372 @@
+.navbar-container {
+  display: flex;
+  justify-content: space-between;
+  background-color: #343a40;
+  box-shadow: 2px 3px 4px 5px rgba(0, 0, 0, 0.027);
+  align-items: center;
+  overflow: hidden;
+  position: relative;
+  padding: 10px;
+  position: sticky;
+  top: 0;
+}
+
+#menu {
+  display: none;
+}
+
+.list {
+  margin-right: 30px;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  text-transform: uppercase;
+  font-size: 1rem;
+  padding-right: 30px;
+  padding-left: 10px;
+  transition: background-color 0.5s ease-in;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-weight: bold;
+  font-family: "Roboto", sans-serif;
+}
+
+a:hover {
+  background-color: transparent;
+}
+
+.icon {
+  margin-left: 2rem;
+  color: black;
+}
+
+.icon h1 {
+  font-size: 1.5rem;
+  color: #fff;
+}
+
+.cartDiv {
+  display: none;
+}
+
+.cart {
+  color: red;
+  position: absolute;
+  top: 10px;
+  width: 10px;
+  font-size: large;
+}
+
+@media (width < 576px) {
+  .navbar-container {
+    height: 43px;
+    background-color: #fff;
+    flex-direction: column;
+    align-items: flex-start;
+    transition: height 0.5s ease;
+    position: relative;
+  }
+  .high {
+    height: 150px;
+  }
+  .list {
+    width: 100%;
+    margin-top: 0px;
+  }
+  a {
+    display: block;
+    padding-top: 2px;
+    padding-bottom: 2px;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-decoration: none;
+    color: #000;
+  }
+  #menu {
+    position: absolute;
+    display: block;
+    fill: black;
+    right: 10px;
+    top: -5px;
+    cursor: pointer;
+    z-index: 1;
+  }
+  .icon {
+    display: none;
+  }
+  .cartDiv {
+    display: inline-block;
+  }
+  .cart {
+    color: red;
+    position: absolute;
+    top: 10px;
+    width: 10px;
+    font-size: large;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+#root {
+  width: 100%;
+  background-color: #e0e1dd;
+}
+
+.moviecontainer {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.moviecontainerC {
+  display: flex;
+  gap: 2rem;
+  flex-wrap: wrap;
+  justify-content: center;
+  padding-top: 20px;
+  max-width: 1200px;
+  width: 100%;
+  margin-inline: auto;
+}
+
+.movie {
+  background-color: rgb(178, 178, 178);
+  max-width: 350px;
+  border-radius: 1px;
+}
+
+.ig {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  -o-object-fit: contain;
+     object-fit: contain;
+}
+
+.info {
+  padding: 10px;
+}
+
+.info h3 {
+  font-size: clamp(1rem, 10vw, 2rem);
+}
+
+.buttoncontainer {
+  text-align: center;
+  padding-top: 20px;
+}
+
+button {
+  padding: 10px;
+  border-radius: 10px;
+  border: none;
+  background-color: brown;
+  font-weight: bold;
+  color: #fff;
+}
+
+#selectspecial {
+  padding: 5px;
+  font-size: large;
+}
+
+label {
+  font-size: x-large;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  font-weight: bold;
+}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0, 0, 0); /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.4); /* Black w/ opacity */
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+}
+
+/* Modal Content */
+.modal-content {
+  background-color: #fefefe;
+  margin: auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 50%;
+  height: 500px;
+}
+
+/* The Close Button */
+.close {
+  color: #aaaaaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+input[type=text] {
+  width: 100%;
+  padding: 12px 20px;
+  margin: 8px 0;
+  display: inline-block;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+  font-size: large;
+}
+
+input[type=submit] {
+  width: 100%;
+  background-color: #4caf50;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: large;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.wrapperx div {
+  border-radius: 5px;
+  padding: 20px;
+}
+
+.wrapperx {
+  width: 100%;
+  max-width: 700px;
+  margin-inline: auto;
+  font-size: large;
+}
+.wrapperx label {
+  font-size: large;
+}
+
+@media (width < 576px) {
+  .modal-content {
+    width: 95%;
+    height: 500px;
+  }
+  .wrapperx label {
+    font-size: medium;
+  }
+}
+.addtoCart {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#rootCard {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+}
+
+.wrapper {
+  display: flex;
+  gap: 1rem;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.grid-item {
+  padding: 5px;
+  text-align: start;
+  width: 100%;
+  max-width: 300px;
+}
+
+.same {
+  padding: 5px;
+  background-color: transparent;
+  color: #000;
+  font-size: x-large;
+}
+
+.h1price {
+  padding: 0px;
+  color: crimson;
+}
+
+.ing {
+  padding: 0px;
+}
+
+footer {
+  width: 100%;
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-between;
+  margin-inline: auto;
+  background-color: beige;
+}
+
+@media (width < 576px) {
+  footer {
+    width: 80%;
+    margin-inline: auto;
+  }
+}
+.clearthecart {
+  padding-top: 20px;
+  text-align: center;
+}
+
+.clearthecart button {
+  background-color: #000;
+}
+
+.quotewrapper {
+  width: 100%;
+  max-width: 1200px;
+  margin-inline: auto;
+  padding: 20px;
+}
+.quotewrapper .quotetitle {
+  text-align: center;
+}
+.quotewrapper p {
+  padding: 10px;
+  text-wrap: balance;
+  text-align: center;
+}
+
+@media (width <= 576px) {
+  .quotewrapper p {
+    background-color: rgba(255, 124, 124, 0.6392156863);
+    font-size: large;
+  }
+}/*# sourceMappingURL=style.css.map */
