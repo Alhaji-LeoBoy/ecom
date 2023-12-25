@@ -61,7 +61,7 @@ a:hover {
 
 @media (width < 576px) {
   .navbar-container {
-    height: 41px;
+    height: 38px;
     background-color: #fff;
     flex-direction: column;
     align-items: flex-start;
