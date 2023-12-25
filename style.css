@@ -61,7 +61,7 @@ a:hover {
 
 @media (width < 576px) {
   .navbar-container {
-    height: 43px;
+    height: 41px;
     background-color: #fff;
     flex-direction: column;
     align-items: flex-start;
@@ -155,7 +155,7 @@ body {
   max-width: 350px;
   height: auto;
   -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 .info {
@@ -232,7 +232,7 @@ label {
   cursor: pointer;
 }
 
-input[type=text] {
+input[type="text"] {
   width: 100%;
   padding: 12px 20px;
   margin: 8px 0;
@@ -243,7 +243,7 @@ input[type=text] {
   font-size: large;
 }
 
-input[type=submit] {
+input[type="submit"] {
   width: 100%;
   background-color: #4caf50;
   color: white;
@@ -255,7 +255,7 @@ input[type=submit] {
   font-size: large;
 }
 
-input[type=submit]:hover {
+input[type="submit"]:hover {
   background-color: #45a049;
 }
 
@@ -369,4 +369,4 @@ footer {
     background-color: rgba(255, 124, 124, 0.6392156863);
     font-size: large;
   }
-}/*# sourceMappingURL=style.css.map */
+} /*# sourceMappingURL=style.css.map */
